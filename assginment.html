@@ -1,0 +1,61 @@
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+<html>
+    <style>
+        /*This setting is for the default page*/
+        section {
+            border: solid;
+        }
+        body{
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        main{
+            display: flex;
+            flex: 1;
+            background-color: aqua;
+        }
+        header, article, aside, footer{
+            text-align: center;
+            border: solid;
+            flex: 1;
+            background-color: yellow;
+        }
+        /*This is for making the ratio 3:1 when width crosses the limit of 700px*/
+        article{
+            flex: 3;
+        }
+
+        /*This is media query to set the condition when the width of the screen goes beyond 700px*/
+        @media (max-width: 700px){
+            main{
+                flex-direction: column;
+            }
+            article, aside{
+                flex: 1;
+                background-color: aliceblue;
+            }
+        }
+    </style>
+    <head>
+        <title>Responsive Web Page</title>
+    </head>
+    <body>
+        <header>
+            <h1>My Responsive Web Page Assignment</h1>
+        </header>
+        <main>
+            <article>
+                <h2>In this I'm trying to adjust the sections according to the width of the sceen for different devices.</h2>
+                <p>Here I'm taking 700px as the max-width</p>
+            </article>
+            <aside>
+                <h2>This is the section which adjusts with the above one while changing the width of the screen.</h2>
+            </aside>
+        </main>
+        <footer>
+            <h3>The main aim of the Assignment is acheived.</h3>
+        </footer>
+    </body>
+</html>
